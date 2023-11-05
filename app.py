@@ -12,7 +12,7 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-train_loader,dataset=get_loader(root_folder='FlickrDataset/Images',annotation_file='FlickrDataset/Captions/captions.txt',transform=transform,num_workers=2)
+train_loader,dataset=get_loader(root_folder='FlickrDataset/Images',annotation_file='captions.txt',transform=transform,num_workers=2)
 filepath="ImageCaptioningusingLSTM.pth"
 from model import CNNtoRNN
 model=CNNtoRNN(embed_size=256,hidden_size=256,vocab_size=len(dataset.vocab),num_layers=1)
