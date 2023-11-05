@@ -10,3 +10,4 @@ pinned: false
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+deployed at https://huggingface.co/spaces/karan99300/Image_Captioning
