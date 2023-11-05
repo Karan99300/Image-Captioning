@@ -16,7 +16,7 @@ train_loader,dataset=get_loader(root_folder='FlickrDataset/Images',annotation_fi
 filepath="ImageCaptioningusingLSTM.pth"
 from model import CNNtoRNN
 model=CNNtoRNN(embed_size=256,hidden_size=256,vocab_size=len(dataset.vocab),num_layers=1)
-model.load_state_dict(torch.load(filepath))
+model.load_state_dict(torch.load(filepath,map_location='cpu'))
 model.eval()
 
 def launch(input):
