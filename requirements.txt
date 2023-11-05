@@ -1,6 +1,6 @@
-opencv-python==4.6.0.66
-torch==2.0.1
-torchvision==0.15.2
-numpy==1.23.5
-spacy==3.5.3
+opencv-python
+torch
+torchvision
+numpy
+spacy
 https://huggingface.co/spacy/en_core_web_sm/resolve/main/en_core_web_sm-any-py3-none-any.whl
