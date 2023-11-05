@@ -22,8 +22,11 @@ model.eval()
 def launch(input):
     im=Image.open(requests.get(input,stream=True).raw)
     image=transform(im.convert('RGB')).unsqueeze(0)
+
+    output=model.caption_image(image,dataset.vocab)
+    str=" ".join(output[1:-1])
     
-    return model.caption_image(image,dataset.vocab)
+    return str
 
 iface=gr.Interface(launch,inputs="text",outputs="text")
 iface.launch()
