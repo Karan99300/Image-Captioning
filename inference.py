@@ -33,7 +33,10 @@ def inference():
     image=transform(im.convert("RGB")).unsqueeze(0)
     
     output=model.caption_image(image.to(device),dataset.vocab)
-    print("Output:"+" ".join(output[1:-1]))
+    predicted_caption = " ".join(output[1:-1])
+    
+    print("Reference Caption:", reference_caption)
+    print("Predicted Caption:", predicted_caption)
     
 if __name__=="__main__":
     inference()
